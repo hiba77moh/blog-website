@@ -22,11 +22,12 @@
 <body class="font-sans antialiased">
     <x-banner />
 
-    
-
     @include('layouts.includs.header')
 
+    @yield('hero')
+
     <main class="container mx-auto px-5 flex flex-grow">
+        {{ $slot }}
     </main>
 
     @include('layouts.includs.footer')

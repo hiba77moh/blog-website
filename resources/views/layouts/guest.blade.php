@@ -18,10 +18,19 @@
         @livewireStyles
     </head>
     <body>
+
+        @include('layouts.includs.header')
+
         <div class="font-sans text-gray-900 dark:text-gray-100 antialiased">
             {{ $slot }}
         </div>
 
+        <main class="container mx-auto px-5 flex flex-grow">
+        </main>
+
+        @include('layouts.includs.footer')
+
+        @stack('modals')
         @livewireScripts
     </body>
 </html>
